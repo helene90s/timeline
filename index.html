@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/style.css">
+    <title>Timeline</title>
+</head>
+<body>
+    
+    <h1>Création Timeline</h1>
+
+    <div class="box-timeline"> <!-- va tout contenir  -->
+        <div class="ligne"></div> <!-- une ligne -->
+
+        <!-- data-anim : attribut personnalisé pour lier les ronds avec les boxs qui vont apparaître -->
+        <div class="rond r1" data-anim="1">💻</div>
+        <div class="rond r2" data-anim="2">🎓</div>
+        <div class="rond r3" data-anim="3">🌎</div>
+        <div class="rond r4" data-anim="4">💼</div>
+
+        <div class="box b1" data-anim="1">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa dignissimos molestiae dicta autem laboriosam aliquid, esse id porro doloremque nam labore alias, nulla deleniti earum?</p>
+            <a href="#" class="btn">Lorem Ipsum</a>
+        </div>
+        <div class="box b2" data-anim="2">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa dignissimos molestiae dicta autem laboriosam aliquid, esse id porro doloremque nam labore alias, nulla deleniti earum?</p>
+            <a href="#" class="btn">Lorem Ipsum</a>
+        </div>
+        <div class="box b3" data-anim="3">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa dignissimos molestiae dicta autem laboriosam aliquid, esse id porro doloremque nam labore alias, nulla deleniti earum?</p>
+            <a href="#" class="btn">Lorem Ipsum</a>
+        </div>
+        <div class="box b4" data-anim="4">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa dignissimos molestiae dicta autem laboriosam aliquid, esse id porro doloremque nam labore alias, nulla deleniti earum?</p>
+            <a href="#" class="btn">Lorem Ipsum</a>
+        </div>
+
+    </div>
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js" integrity="sha512-5/OHwmQzDSBS0Ous4/hlYoWLHd06/d2r7LdKZQVBXOA6PvOqWVXtdboiLTU7lQTGyVoKVTNkwi0ol4gHGlw5ww==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js" integrity="sha512-RvUydNGlqYJapy0t4AH8hDv/It+zKsv4wOQGb+iOnEfa6NnF2fzjXgRy+FDjSpMfC3sjokNUzsfYZaZ8QAwIxg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+    <script src="/app.js"></script>
+</body>
+</html>

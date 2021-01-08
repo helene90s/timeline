@@ -1,0 +1,136 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: midnightblue;
+}
+
+h1 {
+    text-align:center;
+    padding: 240px 0;
+    color: #f1f1f1;
+}
+
+.box-timeline {
+    width: 100%;
+    height: 1500px;
+    background-color: #f1f1f1;
+    position: relative; /*pour positionner des éléments qui seront en absolut enfant de cette box, ils sont relatifs à la box*/
+    padding: 80px 0 250px 0;
+    margin-bottom: 100px;
+}
+
+.ligne {
+    height: 1000px;
+    width: 8px;
+    margin: 0 auto; /*pour centrer*/
+    background: #333;
+}
+
+.rond {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #333;
+    position: absolute;
+    border: 1px solid #000;
+    left: 50%; 
+    transform: translate(-50%); /*tire de -50% de leur largeur pour parfaitement les centrer sur x*/
+    display: flex; /* pour centrer les émojis*/
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+/*Calcul pour placer les ronds:
+1000 - 160 + 80 / 3 =~306
+*/
+
+/*1000 est la heuteur total de la ligne*/
+/*160 c'est le premier et le dernier rond, on les enlève à la hauteur pour trouver mes 3 longueurs de ligne*/
+/*80 par rapport à la boxe qui a 80 de padding*/
+/*Diviser par 3 pour avoir la valeur des trois lignes*/
+/*Puis on rajoute 306 à 80 et ainsi de suite*/
+.r1 {
+    top: 80px; /* la box-timeline padding 80px*/
+}
+.r2 {
+    top: 386px; /**/
+}
+.r3 {
+    top: 692px;
+}
+.r4 {
+    top: 1000px;
+}
+
+.box {
+    color: #333;
+    width: 400px;
+    min-height: 200px;
+    padding: 20px;
+    border-radius: 3px;
+    height: auto;
+    background: #f1f1f1;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.b1 {
+    top: 80px;
+    left: calc(50% - 270px); /*-200 cest la moitié de la box et 70 pour décaler*/
+}
+
+.b2 {
+    top: 386px;
+    left: calc(50% + 270px); 
+}
+
+.b3 {
+    top: 692px;
+    left: calc(50% - 270px); 
+}
+
+.b4 {
+    top: 1000px;
+    left: calc(50% + 270px); 
+}
+
+.box p {
+    line-height: 20px;
+    font-size: 18px;
+    margin: 10px 0 20px 0;
+}
+
+.btn {
+    display:block;
+    background: midnightblue;
+    padding: 10px; /*aere le boutton*/
+    width: 120px;
+    text-align:center;
+    color: #f1f1f1;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+/*de 1000px à 0*/
+@media screen and (max-width: 1000px) {
+
+    .ligne {
+        position: relative;
+        left: 200px;
+    }
+    .rond {
+        left: calc(50% + 200px);
+    }
+    .box {
+        left: calc(50% - 50px)
+    }
+
+}
